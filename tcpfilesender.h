@@ -1,9 +1,11 @@
-#ifndef TCPFILESENDER_H
+﻿#ifndef TCPFILESENDER_H
 #define TCPFILESENDER_H
 
 #include <QDialog>
 #include <QtNetwork>
 #include <QtWidgets>
+#include <QLineEdit>
+#include <QMessageBox>
 
 class TcpFileSender : public QDialog
 {
@@ -33,6 +35,8 @@ private:
     QString          fileName;
     QFile            *localFile;
     QByteArray       outBlock;
+    QLineEdit *ipLineEdit;
+    QLineEdit *portLineEdit;
 };
 
 #endif // TCPFILESENDER_H
